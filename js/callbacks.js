@@ -4,7 +4,7 @@ const peopleList = document.getElementById('people');
 const btn = document.querySelector('button');
 
 // Make an AJAX request
-const = getJSON(url) => {
+const getJSON = (url) => {
   const xhr = new XMLHttpRequest();
   xhr.open('GET', url);
   xhr.onload = () => {
@@ -17,7 +17,7 @@ const = getJSON(url) => {
 }
 
 // Generate the markup for each profile
-const = generateHTML(data) => {
+const generateHTML = (data) => {
   const section = document.createElement('section');
   peopleList.appendChild(section);
   section.innerHTML = `
@@ -27,3 +27,5 @@ const = generateHTML(data) => {
     <p>${data.extract}</p>
   `;
 }
+
+getJSON(astrosUrl);
